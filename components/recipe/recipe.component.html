@@ -1,0 +1,9 @@
+<div class="recipe-card">
+    <img class="recipe-card__image" [src]="recipe.imageUrl" [alt]="recipe.name" />
+    <h3 class="recipe-card__name">{{ recipe.name }}</h3>
+    <div class="recipe-card__tags">
+      <span class="recipe-card__tag" *ngFor="let tag of recipe.tags">{{ tag }}</span>
+    </div>
+    <button class="recipe-card__button">Add to Cart</button>
+  </div>
+  

@@ -1,0 +1,104 @@
+.recipe-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    gap: 20px; 
+    padding: 20px; 
+    box-sizing: border-box; 
+  }
+  
+  .recipe-card {
+    flex: 1 1 calc(20% - 20px); 
+    max-width: 200px; 
+    min-width: 200px; 
+    height: 350px;
+    box-sizing: border-box; 
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-between; 
+    text-align: center; 
+    background: #9c5757; 
+    border: 1px solid #ccc; 
+    border-radius: 8px;
+    overflow: hidden;
+    padding: 20px; 
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.2s ease-in-out; 
+  }
+  
+  .recipe-card:hover {
+    transform: scale(1.05); 
+  }
+  
+  .recipe-card img {
+    width: 100%; 
+    height: 150px; 
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;
+    margin-bottom: 10px; 
+  }
+  
+  .recipe-card__title {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 5px 0; 
+  }
+  
+  .recipe-card__category {
+    font-size: 0.9rem;
+    color: #666; 
+    margin-bottom: 5px; 
+  }
+  
+  .recipe-card__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px; 
+    margin-bottom: 5px; 
+  }
+  
+  .recipe-card__tag {
+    background: #007bff;
+    color: #fff;
+    padding: 0.3rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+  }
+  
+  .recipe-card__button {
+    margin-top: auto; 
+    padding: 8px 12px;
+    background: #ff0000; 
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .recipe-card__button:hover {
+    background: #0056b3; 
+  }
+  
+  @media (max-width: 1024px) {
+    .recipe-card {
+      flex: 1 1 calc(33.33% - 20px); 
+      height: 350px; 
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .recipe-card {
+      flex: 1 1 calc(50% - 20px); 
+      height: 350px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .recipe-card {
+      flex: 1 1 100%; 
+      height: 350px; 
+    }
+  }
+  

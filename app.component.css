@@ -1,0 +1,67 @@
+/* Default Grid View */
+.recipe-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .recipe-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    border: 1px solid #8f0a0a;
+    border-radius: 5px;
+    background-color: #a52424;
+  }
+  
+  .recipe-card img {
+    max-width: 100%;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+  }
+  
+  .recipe-card .tags span {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.2rem 0.5rem;
+    margin: 0.2rem;
+    border-radius: 3px;
+    font-size: 0.8rem;
+  }
+  
+  /* Grid View: Tablets and Larger */
+  @media (min-width: 768px) {
+    .recipe-list.grid-view {
+      grid-template-columns: repeat(3, 1fr); /* 3 columns on medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .recipe-list.grid-view {
+      grid-template-columns: repeat(5, 1fr); /* 5 columns on larger screens */
+    }
+  }
+  
+  /* List View for Smaller Screens */
+  @media (max-width: 480px) {
+    .recipe-list.list-view {
+      display: block; /* Stack all items in a single column */
+    }
+    
+    .recipe-card {
+      padding: 1.5rem; /* Increase padding in list view */
+      margin-bottom: 1rem; /* Add space between cards */
+    }
+  
+    .recipe-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 1.5rem; /* Increased spacing for list view */
+    }
+  }
+  
